@@ -3,9 +3,12 @@ import { useEffect, useState } from "react";
 const links = [
   { href: "#about", label: "About" },
   { href: "#work", label: "Work" },
-  { href: "#focus", label: "Focus" },
+  { href: "#experience", label: "Experience" },
+  { href: "#skills", label: "Skills" },
+  { href: "#credentials", label: "Credentials" },
   { href: "#contact", label: "Contact" },
 ];
+
 
 export function SiteNav() {
   const [scrolled, setScrolled] = useState(false);
@@ -30,7 +33,7 @@ export function SiteNav() {
         <a href="#top" className="font-mono text-xs tracking-[0.28em] uppercase text-foreground">
           S.Kachary
         </a>
-        <ul className="flex items-center gap-6 md:gap-10">
+        <ul className="flex flex-wrap items-center justify-end gap-x-4 gap-y-1 md:gap-x-8">
           {links.map((l) => (
             <li key={l.href}>
               <a

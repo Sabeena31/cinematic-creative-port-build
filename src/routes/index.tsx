@@ -4,7 +4,18 @@ import { ArrowUpRight } from "lucide-react";
 import { HeroBackdrop } from "@/components/site/HeroBackdrop";
 import { SiteNav } from "@/components/site/SiteNav";
 import { ProjectCard } from "@/components/site/ProjectCard";
-import { profile, techProjects, designProjects, focusAreas } from "@/lib/site-content";
+import {
+  profile,
+  techProjects,
+  designProjects,
+  focusAreas,
+  experience,
+  education,
+  skillGroups,
+  certifications,
+  inProgressCertifications,
+} from "@/lib/site-content";
+
 
 const title = "Sabeena Kachary — Cybersecurity & GRC | UI/UX | Tech";
 const description =
@@ -151,6 +162,142 @@ function Index() {
           </div>
         </div>
       </section>
+
+      {/* EXPERIENCE + EDUCATION */}
+      <section id="experience" className="scroll-mt-24 border-t border-border bg-secondary/25">
+        <div className="mx-auto max-w-[110rem] px-6 py-24 md:px-12 md:py-36">
+          <span className="label-mono">Experience</span>
+          <h2 className="mt-4 max-w-3xl text-[clamp(1.9rem,5.5vw,4rem)] leading-[0.98] font-medium tracking-[-0.03em]">
+            Learning in practice.
+          </h2>
+
+          <div className="mt-14 border-t border-border">
+            {experience.map((e) => (
+              <article
+                key={e.role}
+                className="group grid gap-4 border-b border-border py-10 md:grid-cols-12 md:gap-10 md:py-14"
+              >
+                <div className="md:col-span-2">
+                  <span className="label-mono">{e.index}</span>
+                </div>
+                <div className="md:col-span-4">
+                  <h3 className="text-xl leading-tight font-medium tracking-tight md:text-3xl">
+                    {e.role}
+                  </h3>
+                  <p className="mt-2 font-mono text-[11px] tracking-[0.18em] uppercase text-primary">
+                    {e.org}
+                  </p>
+                </div>
+                <div className="md:col-span-6">
+                  <p className="max-w-2xl text-sm leading-relaxed text-muted-foreground md:text-base">
+                    {e.body}
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-24">
+            <span className="label-mono">Education</span>
+            <div className="mt-10 grid gap-px border border-border bg-border md:grid-cols-2">
+              {education.map((ed) => (
+                <div
+                  key={ed.degree}
+                  className="bg-background/70 p-8 backdrop-blur-sm transition-colors duration-500 hover:bg-background md:p-10"
+                >
+                  <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-primary">
+                    {ed.period}
+                  </p>
+                  <h3 className="mt-6 text-lg leading-snug font-medium tracking-tight md:text-2xl">
+                    {ed.degree}
+                  </h3>
+                  <p className="mt-3 text-sm text-muted-foreground">{ed.school}</p>
+                  <p className="mt-6 font-mono text-xs tracking-[0.16em] uppercase text-foreground">
+                    {ed.result}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SKILLS */}
+      <section id="skills" className="scroll-mt-24 border-t border-border">
+        <div className="mx-auto max-w-[110rem] px-6 py-24 md:px-12 md:py-36">
+          <span className="label-mono">Skills</span>
+          <h2 className="mt-4 max-w-3xl text-[clamp(1.9rem,5.5vw,4rem)] leading-[0.98] font-medium tracking-[-0.03em]">
+            Two toolkits,
+            <br />
+            used together.
+          </h2>
+
+          <div className="mt-14 grid gap-px border border-border bg-border md:grid-cols-2">
+            {skillGroups.map((g) => (
+              <div key={g.title} className="bg-background p-8 md:p-12">
+                <div className="flex items-baseline gap-4">
+                  <span className="font-mono text-sm text-primary">{g.index}</span>
+                  <h3 className="font-mono text-xs tracking-[0.22em] uppercase text-foreground md:text-sm">
+                    {g.title}
+                  </h3>
+                </div>
+                <ul className="mt-8 flex flex-wrap gap-2">
+                  {g.items.map((s) => (
+                    <li
+                      key={s}
+                      className="rounded-full border border-border px-4 py-2 text-xs text-muted-foreground transition-colors duration-300 hover:border-primary/60 hover:text-foreground md:text-sm"
+                    >
+                      {s}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CERTIFICATIONS */}
+      <section id="credentials" className="scroll-mt-24 border-t border-border bg-secondary/25">
+        <div className="mx-auto max-w-[110rem] px-6 py-24 md:px-12 md:py-36">
+          <span className="label-mono">Certifications</span>
+          <h2 className="mt-4 max-w-3xl text-[clamp(1.9rem,5.5vw,4rem)] leading-[0.98] font-medium tracking-[-0.03em]">
+            Completed &amp; in progress.
+          </h2>
+
+          <div className="mt-14 grid gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
+            {certifications.map((c) => (
+              <div
+                key={c.name}
+                className="group bg-background p-8 transition-colors duration-500 hover:bg-secondary/40 md:p-10"
+              >
+                <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-primary">
+                  Completed
+                </span>
+                <h3 className="mt-6 text-base leading-snug font-medium tracking-tight md:text-xl">
+                  {c.name}
+                </h3>
+                <p className="mt-3 text-sm text-muted-foreground">{c.issuer}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12">
+            <span className="label-mono">Currently preparing</span>
+            <ul className="mt-6 flex flex-wrap gap-3">
+              {inProgressCertifications.map((c) => (
+                <li
+                  key={c.name}
+                  className="rounded-full border border-dashed border-primary/50 bg-background/60 px-5 py-3 text-sm text-foreground backdrop-blur-sm"
+                >
+                  {c.name}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </section>
+
 
       {/* CONTACT */}
       <section id="contact" className="scroll-mt-24 border-t border-border">

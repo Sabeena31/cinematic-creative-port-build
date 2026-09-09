@@ -71,3 +71,79 @@ export const focusAreas = [
     body: "Interface, product and visual design — calm layouts, clear hierarchy, and flows designed around real user context.",
   },
 ];
+
+export const experience = [
+  {
+    index: "01",
+    role: "Cyber Security Intern",
+    org: "ApexPlanet Software Pvt. Ltd.",
+    body: "Worked on practical security tasks including vulnerability assessment, network scanning and traffic analysis, documenting findings in clear, actionable security reports.",
+  },
+  {
+    index: "02",
+    role: "Web UI/UX Engineer",
+    org: "Redalis",
+    body: "Designed and built responsive web interfaces, translating wireframes and prototypes into clean, usable layouts across screen sizes.",
+  },
+];
+
+export const education = [
+  {
+    degree: "MCA — Information Security & Management Services",
+    school: "JAIN University, Bengaluru",
+    period: "2025 — 2027",
+    result: "SGPA 8.6",
+  },
+  {
+    degree: "BCA — General",
+    school: "Kristu Jayanti University, Bengaluru",
+    period: "2022 — 2025",
+    result: "CGPA 8.36",
+  },
+];
+
+export const skillGroups = [
+  {
+    index: "01",
+    title: "Cybersecurity & Tech",
+    items: [
+      "Vulnerability Assessment",
+      "Network Scanning",
+      "Traffic Analysis",
+      "Networking & Security",
+      "Risk Assessment",
+      "Security Reporting",
+      "Wireshark",
+      "Nmap",
+      "Python",
+      "Java",
+      "JavaScript",
+      "SQL",
+      "HTML",
+      "CSS",
+    ],
+  },
+  {
+    index: "02",
+    title: "UI/UX & Design",
+    items: [
+      "Figma",
+      "Framer",
+      "Wireframing",
+      "Prototyping",
+      "Responsive UI Design",
+      "UI/UX Design",
+    ],
+  },
+];
+
+export const certifications = [
+  { name: "Junior Cybersecurity Analyst", issuer: "Cisco" },
+  { name: "Certified Ethical Hacker (CEH)", issuer: "LinkedIn Learning" },
+  { name: "Network Architecture", issuer: "Coursera" },
+  { name: "Networking Fundamentals", issuer: "Infosys Springboard" },
+  { name: "UI/UX Training Course", issuer: "Internshala" },
+  { name: "Foundations of User Experience Design", issuer: "Coursera / Google" },
+];
+
+export const inProgressCertifications = [{ name: "CompTIA Security+" }];
