@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 
-import { HeroBackdrop } from "@/components/site/HeroBackdrop";
+import { HeroBackdrop, useHeroCycle } from "@/components/site/HeroBackdrop";
 import { SiteNav } from "@/components/site/SiteNav";
 import { ProjectCard } from "@/components/site/ProjectCard";
 import {
@@ -36,15 +36,17 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  const { clips, active, select } = useHeroCycle();
+
   return (
     <div id="top" className="min-h-screen bg-background text-foreground">
       <SiteNav />
 
       {/* HERO */}
       <section className="relative grain flex min-h-[100svh] items-end overflow-hidden">
-        <HeroBackdrop />
+        <HeroBackdrop active={active} />
 
-        <div className="relative mx-auto w-full max-w-[110rem] px-6 pb-20 md:px-12 md:pb-28">
+        <div className="relative z-[2] mx-auto w-full max-w-[110rem] px-6 pb-20 md:px-12 md:pb-28">
           <p className="label-mono rise-in">{profile.location} — Portfolio</p>
 
           <h1
@@ -70,6 +72,31 @@ function Index() {
               View work
               <span aria-hidden="true">↓</span>
             </a>
+          </div>
+
+          <div
+            className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 rise-in"
+            style={{ animationDelay: "360ms" }}
+          >
+            {clips.map((c, i) => (
+              <button
+                key={c.id}
+                type="button"
+                onClick={() => select(i)}
+                aria-pressed={i === active}
+                className={`group inline-flex items-center gap-3 font-mono text-[10px] tracking-[0.22em] uppercase transition-colors md:text-[11px] ${
+                  i === active ? "text-foreground" : "text-muted-foreground hover:text-foreground"
+                }`}
+              >
+                <span
+                  aria-hidden="true"
+                  className={`h-px w-8 transition-colors duration-500 ${
+                    i === active ? "bg-primary" : "bg-border group-hover:bg-foreground/50"
+                  }`}
+                />
+                {`0${i + 1}`} {c.label}
+              </button>
+            ))}
           </div>
         </div>
       </section>
