@@ -227,12 +227,12 @@ function Index() {
         <div className="mx-auto max-w-[110rem] px-6 py-24 md:px-12 md:py-36">
           <span className="label-mono">Skills</span>
           <h2 className="mt-4 max-w-3xl text-[clamp(1.9rem,5.5vw,4rem)] leading-[0.98] font-medium tracking-[-0.03em]">
-            Two toolkits,
+            Three toolkits,
             <br />
-            used together.
+            one practice.
           </h2>
 
-          <div className="mt-14 grid gap-px border border-border bg-border md:grid-cols-2">
+          <div className="mt-14 grid gap-px border border-border bg-border md:grid-cols-3">
             {skillGroups.map((g) => (
               <div key={g.title} className="bg-background p-8 md:p-12">
                 <div className="flex items-baseline gap-4">
