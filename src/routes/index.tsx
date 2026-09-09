@@ -74,30 +74,6 @@ function Index() {
             </a>
           </div>
 
-          <div
-            className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 rise-in"
-            style={{ animationDelay: "360ms" }}
-          >
-            {clips.map((c, i) => (
-              <button
-                key={c.id}
-                type="button"
-                onClick={() => select(i)}
-                aria-pressed={i === active}
-                className={`group inline-flex items-center gap-3 font-mono text-[10px] tracking-[0.22em] uppercase transition-colors md:text-[11px] ${
-                  i === active ? "text-foreground" : "text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                <span
-                  aria-hidden="true"
-                  className={`h-px w-8 transition-colors duration-500 ${
-                    i === active ? "bg-primary" : "bg-border group-hover:bg-foreground/50"
-                  }`}
-                />
-                {`0${i + 1}`} {c.label}
-              </button>
-            ))}
-          </div>
         </div>
       </section>
 
