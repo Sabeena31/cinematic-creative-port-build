@@ -105,7 +105,7 @@ export const education = [
 export const skillGroups = [
   {
     index: "01",
-    title: "Cybersecurity & Tech",
+    title: "Cybersecurity & GRC",
     items: [
       "Vulnerability Assessment",
       "Network Scanning",
@@ -115,16 +115,15 @@ export const skillGroups = [
       "Security Reporting",
       "Wireshark",
       "Nmap",
-      "Python",
-      "Java",
-      "JavaScript",
-      "SQL",
-      "HTML",
-      "CSS",
     ],
   },
   {
     index: "02",
+    title: "Tech / Development",
+    items: ["Python", "Java", "JavaScript", "SQL", "HTML", "CSS"],
+  },
+  {
+    index: "03",
     title: "UI/UX & Design",
     items: [
       "Figma",
