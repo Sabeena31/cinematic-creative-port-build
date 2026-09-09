@@ -4,7 +4,18 @@ import { ArrowUpRight } from "lucide-react";
 import { HeroBackdrop } from "@/components/site/HeroBackdrop";
 import { SiteNav } from "@/components/site/SiteNav";
 import { ProjectCard } from "@/components/site/ProjectCard";
-import { profile, techProjects, designProjects, focusAreas } from "@/lib/site-content";
+import {
+  profile,
+  techProjects,
+  designProjects,
+  focusAreas,
+  experience,
+  education,
+  skillGroups,
+  certifications,
+  inProgressCertifications,
+} from "@/lib/site-content";
+
 
 const title = "Sabeena Kachary — Cybersecurity & GRC | UI/UX | Tech";
 const description =
