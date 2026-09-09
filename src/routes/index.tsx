@@ -36,7 +36,7 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
-  const { clips, active, select } = useHeroCycle();
+  const { active } = useHeroCycle();
 
   return (
     <div id="top" className="min-h-screen bg-background text-foreground">
