@@ -4,6 +4,7 @@ import { ArrowUpRight } from "lucide-react";
 import { HeroBackdrop, useHeroCycle } from "@/components/site/HeroBackdrop";
 import { SiteNav } from "@/components/site/SiteNav";
 import { ProjectCard } from "@/components/site/ProjectCard";
+import { ContactForm } from "@/components/site/ContactForm";
 import {
   profile,
   techProjects,
@@ -278,9 +279,31 @@ function Index() {
                   Completed
                 </span>
                 <h3 className="mt-6 text-base leading-snug font-medium tracking-tight md:text-xl">
-                  {c.name}
+                  {c.url ? (
+                    <a
+                      href={c.url}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="underline-offset-4 transition-colors hover:text-primary hover:underline"
+                    >
+                      {c.name}
+                    </a>
+                  ) : (
+                    c.name
+                  )}
                 </h3>
                 <p className="mt-3 text-sm text-muted-foreground">{c.issuer}</p>
+                {c.url && (
+                  <a
+                    href={c.url}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="mt-6 inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.18em] uppercase text-muted-foreground transition-colors hover:text-primary"
+                  >
+                    View credential
+                    <ArrowUpRight className="size-3.5" aria-hidden="true" />
+                  </a>
+                )}
               </div>
             ))}
           </div>
@@ -305,25 +328,36 @@ function Index() {
       {/* CONTACT */}
       <section id="contact" className="scroll-mt-24 border-t border-border">
         <div className="mx-auto max-w-[110rem] px-6 py-24 md:px-12 md:py-40">
-          <span className="label-mono">Contact</span>
+          <span className="label-mono">Open for opportunities</span>
           <h2 className="mt-6 max-w-4xl text-[clamp(2rem,7vw,5.5rem)] leading-[0.95] font-medium tracking-[-0.04em]">
-            Open to internships, collaborations and{" "}
-            <span className="text-primary">good problems.</span>
+            Let&rsquo;s <span className="text-primary">connect.</span>
           </h2>
 
-          <div className="mt-14 flex flex-wrap items-center gap-x-10 gap-y-4">
-            <a
-              href={profile.github}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="inline-flex items-center gap-2 border-b border-foreground pb-1 text-lg transition-colors hover:border-primary hover:text-primary md:text-2xl"
-            >
-              GitHub
-              <ArrowUpRight className="size-5" aria-hidden="true" />
-            </a>
-            <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-muted-foreground/70">
-              More channels coming soon
-            </p>
+          <div className="mt-14 grid gap-14 md:grid-cols-12">
+            <div className="md:col-span-7">
+              <ContactForm />
+            </div>
+
+            <div className="flex flex-col gap-4 md:col-span-5 md:items-end">
+              <a
+                href={profile.linkedin}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="inline-flex items-center gap-2 border-b border-foreground pb-1 text-lg transition-colors hover:border-primary hover:text-primary md:text-2xl"
+              >
+                LinkedIn
+                <ArrowUpRight className="size-5" aria-hidden="true" />
+              </a>
+              <a
+                href={profile.github}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="inline-flex items-center gap-2 border-b border-foreground pb-1 text-lg transition-colors hover:border-primary hover:text-primary md:text-2xl"
+              >
+                GitHub
+                <ArrowUpRight className="size-5" aria-hidden="true" />
+              </a>
+            </div>
           </div>
         </div>
       </section>
