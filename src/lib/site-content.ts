@@ -157,8 +157,6 @@ export const certifications: { name: string; issuer: string; url?: string }[] = 
     issuer: "LinkedIn Learning",
     url: "https://www.linkedin.com/learning/certificates/a508d5cf49767fe9ae063ed9424619009aafa43257b1ddc5e63a9f55d7b95c3a?trk=share_certificate",
   },
-  { name: "Network Architecture", issuer: "Coursera" },
-  { name: "Networking Fundamentals", issuer: "Infosys Springboard" },
   {
     name: "UI/UX Training Course",
     issuer: "Internshala",
