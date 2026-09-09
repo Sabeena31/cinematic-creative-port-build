@@ -4,6 +4,7 @@ export const profile = {
   location: "India",
   bio: "I'm a technology student exploring the intersection of cybersecurity, GRC, UX/UI, and technology. I enjoy building practical security-focused projects and thoughtful digital experiences that solve real problems.",
   github: "https://github.com/Sabeena31",
+  linkedin: "https://www.linkedin.com/in/sabeena-kachary-041366259/",
 };
 
 export type Project = {
@@ -30,7 +31,7 @@ export const techProjects: Project[] = [
     title: "Vehicle Service Management System",
     description:
       "A group academic web application for vehicle servicing. My contribution focused on frontend development and UI implementation.",
-    live: "https://vehicle-service-management-system-rhov.vercel.app",
+    live: "https://vehicle-service-management-system-rho.vercel.app/",
     liveLabel: "Live site",
     github: "https://github.com/Sabeena31/vehicle-service-management-system",
     tags: ["Frontend", "Web app", "Group project"],
@@ -42,15 +43,17 @@ export const designProjects: Project[] = [
     title: "Medit — Meditation & Wellness App",
     description:
       "A UI/UX design project focused on creating a calm and accessible digital experience for meditation and wellness.",
-    note: "Figma case study link coming soon",
-    tags: ["UI/UX", "Mobile", "Figma"],
+    live: "https://www.figma.com/design/pXqwo677YiMYNlkt16tARp/Medit?node-id=0-1&p=f&t=FtwurZ91D207sZXx-0",
+    liveLabel: "View Figma design",
+    tags: ["UI/UX Product Design", "Figma", "Mobile"],
   },
   {
     title: "Safar, Not Suffer — Solo Travel App",
     description:
       "A UI/UX and product design project focused on helping solo travelers plan and navigate their journeys more confidently.",
-    note: "Figma case study link coming soon",
-    tags: ["Product design", "UI/UX", "Figma"],
+    live: "https://www.figma.com/design/1Xb9nHSIEmTtBih6Xu4E5u/SOLO-TRAVEL-APP-DESIGN?node-id=0-1&t=eXfTumgVC5XBvq4S-1",
+    liveLabel: "View Figma design",
+    tags: ["UI/UX Product Design", "Figma", "Mobile"],
   },
 ];
 
@@ -90,7 +93,7 @@ export const experience = [
 export const education = [
   {
     degree: "MCA — Information Security & Management Services",
-    school: "JAIN University, Bengaluru",
+    school: "Jain University, Bengaluru",
     period: "2025 — 2027",
     result: "SGPA 8.6",
   },
@@ -107,14 +110,21 @@ export const skillGroups = [
     index: "01",
     title: "Cybersecurity & GRC",
     items: [
+      "Risk Assessment",
+      "Risk Register",
+      "Security Controls & Policies",
+      "Compliance & Governance",
+      "Audit Documentation",
+      "Risk Remediation",
       "Vulnerability Assessment",
+      "Security Monitoring",
+      "Log Analysis",
       "Network Scanning",
       "Traffic Analysis",
       "Networking & Security",
-      "Risk Assessment",
       "Security Reporting",
-      "Wireshark",
       "Nmap",
+      "Wireshark",
     ],
   },
   {
@@ -136,13 +146,29 @@ export const skillGroups = [
   },
 ];
 
-export const certifications = [
-  { name: "Junior Cybersecurity Analyst", issuer: "Cisco" },
-  { name: "Certified Ethical Hacker (CEH)", issuer: "LinkedIn Learning" },
+export const certifications: { name: string; issuer: string; url?: string }[] = [
+  {
+    name: "Junior Cybersecurity Analyst",
+    issuer: "Cisco",
+    url: "https://www.credly.com/badges/7c0cbea3-6c73-4e5b-a61e-5f72589196eb/public_url",
+  },
+  {
+    name: "Certified Ethical Hacker (CEH)",
+    issuer: "LinkedIn Learning",
+    url: "https://www.linkedin.com/learning/certificates/a508d5cf49767fe9ae063ed9424619009aafa43257b1ddc5e63a9f55d7b95c3a?trk=share_certificate",
+  },
   { name: "Network Architecture", issuer: "Coursera" },
   { name: "Networking Fundamentals", issuer: "Infosys Springboard" },
-  { name: "UI/UX Training Course", issuer: "Internshala" },
-  { name: "Foundations of User Experience Design", issuer: "Coursera / Google" },
+  {
+    name: "UI/UX Training Course",
+    issuer: "Internshala",
+    url: "https://trainings.internshala.com/s/v/3059002/c632e37e",
+  },
+  {
+    name: "Foundations of User Experience Design",
+    issuer: "Coursera / Google",
+    url: "https://www.coursera.org/account/accomplishments/records/6RRWHRRZR92L",
+  },
 ];
 
 export const inProgressCertifications = [{ name: "CompTIA Security+" }];
