@@ -24,6 +24,7 @@ export const techProjects: Project[] = [
       "A SOC-style incident response platform that simulates credential-stuffing attacks, helping analysts detect suspicious activity, investigate incidents, evaluate response actions, and track the incident through verification and audit reporting.",
     live: "https://incidentiq-sabeena.vercel.app",
     liveLabel: "Live app",
+    github: "https://github.com/Sabeena31/incidentiq",
     tags: ["SOC", "Incident response", "Cybersecurity"],
   },
   {
@@ -32,6 +33,7 @@ export const techProjects: Project[] = [
       "A Governance, Risk & Compliance platform that brings together risk management, security controls, compliance frameworks, evidence, audits, findings, and remediation in one connected workflow.",
     live: "https://risk-sphere-sabeena.vercel.app",
     liveLabel: "Live app",
+    github: "https://github.com/Sabeena31/RiskSphere",
     tags: ["GRC", "Risk management", "Compliance"],
   },
   {
@@ -40,6 +42,7 @@ export const techProjects: Project[] = [
       "A full-stack study-partner platform that helps students find compatible study partners and collaborate through shared study rooms with tasks, progress tracking, a study timer, and chat.",
     live: "https://studycircle-sabeena.vercel.app",
     liveLabel: "Live app",
+    github: "https://github.com/Sabeena31/studycircle",
     tags: ["MERN", "Full stack", "Web app"],
   },
   {
