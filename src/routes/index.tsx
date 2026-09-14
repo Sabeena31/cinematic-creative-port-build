@@ -269,39 +269,41 @@ function Index() {
             Completed &amp; in progress.
           </h2>
 
-          <div className="mt-14 grid gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mx-auto mt-14 grid max-w-3xl grid-cols-2 gap-px border border-border bg-border p-px">
             {certifications.map((c) => (
               <div
                 key={c.name}
-                className="group bg-background p-8 transition-colors duration-500 hover:bg-secondary/40 md:p-10"
+                className="group flex aspect-square flex-col justify-between bg-background p-4 transition-colors duration-500 hover:bg-secondary/40 md:p-6"
               >
-                <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-primary">
-                  Completed
-                </span>
-                <h3 className="mt-6 text-base leading-snug font-medium tracking-tight md:text-xl">
-                  {c.url ? (
-                    <a
-                      href={c.url}
-                      target="_blank"
-                      rel="noreferrer noopener"
-                      className="underline-offset-4 transition-colors hover:text-primary hover:underline"
-                    >
-                      {c.name}
-                    </a>
-                  ) : (
-                    c.name
-                  )}
-                </h3>
-                <p className="mt-3 text-sm text-muted-foreground">{c.issuer}</p>
+                <div>
+                  <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-primary">
+                    Completed
+                  </span>
+                  <h3 className="mt-3 text-xs leading-snug font-medium tracking-tight md:mt-4 md:text-base">
+                    {c.url ? (
+                      <a
+                        href={c.url}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        className="underline-offset-4 transition-colors hover:text-primary hover:underline"
+                      >
+                        {c.name}
+                      </a>
+                    ) : (
+                      c.name
+                    )}
+                  </h3>
+                  <p className="mt-1.5 text-[10px] text-muted-foreground md:mt-2 md:text-xs">{c.issuer}</p>
+                </div>
                 {c.url && (
                   <a
                     href={c.url}
                     target="_blank"
                     rel="noreferrer noopener"
-                    className="mt-6 inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.18em] uppercase text-muted-foreground transition-colors hover:text-primary"
+                    className="inline-flex items-center gap-1.5 self-start font-mono text-[9px] tracking-[0.18em] uppercase text-muted-foreground transition-colors hover:text-primary md:text-[10px]"
                   >
                     View credential
-                    <ArrowUpRight className="size-3.5" aria-hidden="true" />
+                    <ArrowUpRight className="size-3 md:size-3.5" aria-hidden="true" />
                   </a>
                 )}
               </div>

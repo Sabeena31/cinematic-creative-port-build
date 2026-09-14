@@ -32,7 +32,7 @@ export function SiteNav() {
         aria-label="Primary"
         className="mx-auto flex max-w-[110rem] items-center justify-between px-6 py-5 md:px-12"
       >
-        <a href="#top" className="font-mono text-xs tracking-[0.28em] text-foreground">
+        <a href="#top" className="font-script text-[1.65rem] leading-none text-foreground md:text-[1.85rem]">
           Sabeena
         </a>
         <div className="flex flex-wrap items-center justify-end gap-x-4 gap-y-2 md:gap-x-8">
