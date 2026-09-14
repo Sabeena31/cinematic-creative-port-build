@@ -269,7 +269,7 @@ function Index() {
             Completed &amp; in progress.
           </h2>
 
-          <div className="mx-auto mt-14 grid max-w-4xl grid-cols-2 gap-px border border-border bg-border p-px">
+          <div className="mx-auto mt-14 grid max-w-3xl grid-cols-2 gap-px border border-border bg-border p-px">
             {certifications.map((c) => (
               <div
                 key={c.name}
@@ -279,7 +279,7 @@ function Index() {
                   <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-primary">
                     Completed
                   </span>
-                  <h3 className="mt-3 text-xs leading-snug font-medium tracking-tight md:mt-4 md:text-sm">
+                  <h3 className="mt-3 text-xs leading-snug font-medium tracking-tight md:mt-4 md:text-base">
                     {c.url ? (
                       <a
                         href={c.url}
@@ -303,7 +303,7 @@ function Index() {
                     className="inline-flex items-center gap-1.5 self-start font-mono text-[9px] tracking-[0.18em] uppercase text-muted-foreground transition-colors hover:text-primary md:text-[10px]"
                   >
                     View credential
-                    <ArrowUpRight className="size-3" aria-hidden="true" />
+                    <ArrowUpRight className="size-3 md:size-3.5" aria-hidden="true" />
                   </a>
                 )}
               </div>
