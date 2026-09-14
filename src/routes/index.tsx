@@ -273,13 +273,13 @@ function Index() {
             {certifications.map((c) => (
               <div
                 key={c.name}
-                className="group flex aspect-square flex-col justify-between bg-background p-5 transition-colors duration-500 hover:bg-secondary/40 md:p-6"
+                className="group flex aspect-square flex-col justify-between bg-background p-4 transition-colors duration-500 hover:bg-secondary/40 md:p-6"
               >
                 <div>
                   <span className="font-mono text-[10px] tracking-[0.2em] uppercase text-primary">
                     Completed
                   </span>
-                  <h3 className="mt-4 text-sm leading-snug font-medium tracking-tight md:text-base">
+                  <h3 className="mt-3 text-xs leading-snug font-medium tracking-tight md:mt-4 md:text-sm">
                     {c.url ? (
                       <a
                         href={c.url}
@@ -293,17 +293,17 @@ function Index() {
                       c.name
                     )}
                   </h3>
-                  <p className="mt-2 text-xs text-muted-foreground">{c.issuer}</p>
+                  <p className="mt-1.5 text-[10px] text-muted-foreground md:mt-2 md:text-xs">{c.issuer}</p>
                 </div>
                 {c.url && (
                   <a
                     href={c.url}
                     target="_blank"
                     rel="noreferrer noopener"
-                    className="inline-flex items-center gap-2 self-start font-mono text-[10px] tracking-[0.18em] uppercase text-muted-foreground transition-colors hover:text-primary"
+                    className="inline-flex items-center gap-1.5 self-start font-mono text-[9px] tracking-[0.18em] uppercase text-muted-foreground transition-colors hover:text-primary md:text-[10px]"
                   >
                     View credential
-                    <ArrowUpRight className="size-3.5" aria-hidden="true" />
+                    <ArrowUpRight className="size-3" aria-hidden="true" />
                   </a>
                 )}
               </div>
