@@ -19,6 +19,30 @@ export type Project = {
 
 export const techProjects: Project[] = [
   {
+    title: "IncidentIQ",
+    description:
+      "A SOC-style incident response platform that simulates credential-stuffing attacks, helping analysts detect suspicious activity, investigate incidents, evaluate response actions, and track the incident through verification and audit reporting.",
+    live: "https://incidentiq-sabeena.vercel.app",
+    liveLabel: "Live app",
+    tags: ["SOC", "Incident response", "Cybersecurity"],
+  },
+  {
+    title: "RiskSphere | GRC Platform",
+    description:
+      "A Governance, Risk & Compliance platform that brings together risk management, security controls, compliance frameworks, evidence, audits, findings, and remediation in one connected workflow.",
+    live: "https://risk-sphere-sabeena.vercel.app",
+    liveLabel: "Live app",
+    tags: ["GRC", "Risk management", "Compliance"],
+  },
+  {
+    title: "StudyCircle",
+    description:
+      "A full-stack study-partner platform that helps students find compatible study partners and collaborate through shared study rooms with tasks, progress tracking, a study timer, and chat.",
+    live: "https://studycircle-sabeena.vercel.app",
+    liveLabel: "Live app",
+    tags: ["MERN", "Full stack", "Web app"],
+  },
+  {
     title: "Security Event Monitoring & Threat Detection Platform",
     description:
       "A Python and Streamlit-based security monitoring platform that analyzes security events and uses explainable rule-based detection to identify suspicious activity.",
